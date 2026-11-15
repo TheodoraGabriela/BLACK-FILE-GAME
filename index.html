@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="BLACK FILES — Case 001: The Missing Signal. A psychological mystery told through a recovered workstation, encrypted phone, forensic evidence, and your choices.">
+  <title>BLACK FILES — Case 001: The Missing Signal</title>
+  <style>
+    :root{color-scheme:dark;--bg:#090909;--panel:#101010;--paper:#e8e4dc;--muted:#898782;--line:#302c29;--red:#c52d31;--red2:#762124;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;--serif:Georgia,"Times New Roman",serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:var(--mono);line-height:1.65}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.15;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.035) 4px)}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 44px));margin:auto}.topbar{height:64px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:.16em;color:var(--muted)}
+    .brand{color:var(--paper);font-weight:700;letter-spacing:.22em}.brand b{color:var(--red)}.status{display:flex;align-items:center;gap:9px}.dot{width:7px;height:7px;background:var(--red);border-radius:50%;box-shadow:0 0 12px var(--red)}
+    .hero{min-height:650px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:76px 0 90px;position:relative}
+    .eyebrow{color:var(--red);font-size:11px;letter-spacing:.22em;text-transform:uppercase}.eyebrow:before{content:"";display:inline-block;width:28px;height:1px;background:var(--red);vertical-align:middle;margin-right:12px}
+    h1{font:700 clamp(62px,10vw,126px)/.82 var(--mono);letter-spacing:-.11em;margin:28px 0 0;max-width:700px}h1 span{display:block;color:var(--red);font-size:.32em;letter-spacing:.12em;margin:27px 0 0 7px}
+    .subtitle{font:italic 25px/1.35 var(--serif);color:#d8d1c7;max-width:530px;margin:35px 0 18px}.intro{max-width:520px;color:var(--muted);font-size:13px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.button{display:inline-flex;align-items:center;gap:12px;padding:15px 19px;text-decoration:none;text-transform:uppercase;font-weight:700;font-size:11px;letter-spacing:.12em;border:1px solid var(--red);background:var(--red);color:#fff;transition:.2s}.button:hover{background:#e13a3f;border-color:#e13a3f;transform:translateY(-2px)}.button.secondary{background:transparent;border-color:#555;color:var(--paper)}.button.secondary:hover{border-color:var(--paper);background:#171717}.arrow{font-size:17px;line-height:10px}
+    .note{font-size:10px;line-height:1.55;color:#77736d;margin-top:13px;max-width:480px}
+    .dossier{position:relative;background:linear-gradient(145deg,#171615,#0d0d0d 70%);border:1px solid #423a35;padding:28px;box-shadow:16px 18px 0 #0d0c0c,18px 20px 0 1px #27211f;transform:rotate(1deg)}
+    .dossier:before{content:"";position:absolute;left:-1px;top:-1px;width:42px;height:4px;background:var(--red)}.stamp{position:absolute;right:20px;top:18px;border:1px solid #9f2c30;color:#cf393d;padding:5px 8px;font-size:9px;letter-spacing:.18em;transform:rotate(9deg)}
+    .file-head{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:0 0 16px;margin-bottom:22px;font-size:10px;letter-spacing:.1em;color:#aaa39b}.file-head strong{color:var(--paper)}
+    .file-label{font-size:9px;color:var(--red);letter-spacing:.19em;margin-bottom:8px}.file-title{font:italic 26px/1.2 var(--serif);margin:0 0 17px}.file-copy{font-size:11px;color:#aaa39b;line-height:1.8}
+    .wave{height:72px;display:flex;align-items:center;gap:3px;margin:25px 0 17px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 2px}.wave i{display:block;width:3px;background:#852629;opacity:.85;height:var(--h)}.wave i:nth-child(4n){background:#d33439}.meta{display:flex;justify-content:space-between;color:#6e6a65;font-size:9px;letter-spacing:.1em}
+    .section{border-top:1px solid var(--line);padding:74px 0}.section-title{display:flex;align-items:baseline;gap:18px;margin-bottom:32px}.section-title .num{font-size:10px;color:var(--red);letter-spacing:.16em}.section-title h2{font-size:22px;letter-spacing:.12em;margin:0}.section-title p{margin:0 0 0 auto;color:var(--muted);font-size:10px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.card{background:var(--bg);padding:25px;min-height:170px}.card .index{color:var(--red);font-size:10px;letter-spacing:.16em}.card h3{font-size:14px;letter-spacing:.08em;margin:19px 0 8px}.card p{font-size:11px;color:var(--muted);margin:0}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.feature{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.feature strong{display:block;color:var(--paper);font-size:23px;font-weight:400}.feature span{font-size:9px;color:var(--muted);letter-spacing:.13em;text-transform:uppercase}
+    .endings{display:flex;flex-wrap:wrap;gap:8px}.ending{padding:8px 10px;border:1px solid var(--line);color:#a9a39b;font-size:9px;letter-spacing:.1em}
+    .download-panel{background:linear-gradient(110deg,#171010,#100d0d 55%,#151211);border:1px solid #492426;padding:36px;display:flex;align-items:center;justify-content:space-between;gap:25px}.download-panel h3{font:italic 28px var(--serif);margin:0 0 5px}.download-panel p{margin:0;color:var(--muted);font-size:11px}
+    .footer{border-top:1px solid var(--line);padding:25px 0 38px;color:#67635f;font-size:9px;letter-spacing:.1em;display:flex;justify-content:space-between;gap:18px}.footer a{color:#a49e97;text-decoration:none}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;gap:48px;padding:65px 0 75px;min-height:0}.dossier{max-width:520px;width:calc(100% - 18px);margin:0 auto 14px}.grid{grid-template-columns:1fr}.card{min-height:0}.features{grid-template-columns:repeat(2,1fr)}.section{padding:55px 0}.download-panel{align-items:flex-start;flex-direction:column}.section-title p{display:none}}
+    @media(max-width:420px){.wrap{width:min(100% - 30px,1120px)}.topbar{font-size:9px}.status span:last-child{display:none}.button{width:100%;justify-content:space-between}.dossier{padding:22px}.footer{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="topbar wrap"><div class="brand">BLACK<b>/</b>FILES</div><div class="status"><span class="dot"></span><span>PUBLIC RELEASE // V1.0.0</span></div></header>
+  <main>
+    <section class="hero wrap">
+      <div>
+        <div class="eyebrow">Case 001 &nbsp;·&nbsp; The Missing Signal</div>
+        <h1>BLACK<span>FILES</span></h1>
+        <p class="subtitle">The signal arrived before it was sent.</p>
+        <p class="intro">A psychological mystery told through a recovered workstation, an encrypted phone, forensic evidence, and the choices you make. Follow the trace. Question the witness. Find the source.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/TheodoraGabriela/BLACK-FILE-GAME/releases/download/V1.0.0/BLACK-FILES.apk" aria-label="Download BLACK FILES Android APK">Download for Android <span class="arrow">↗</span></a>
+          <a class="button secondary" href="https://github.com/TheodoraGabriela/BLACK-FILE-GAME/releases/download/V1.0.0/BLACK-FILES-unsigned.ipa" aria-label="Download unsigned BLACK FILES iOS IPA">Get iOS IPA <span class="arrow">↗</span></a>
+        </div>
+        <p class="note">iOS build is unsigned; use a compatible sideloading and signing method. Android build is a debug APK for direct installation, not a Play Store release.</p>
+      </div>
+      <aside class="dossier" aria-label="Case file preview">
+        <div class="stamp">EYES ONLY</div>
+        <div class="file-head"><span>RECOVERED DEVICE // <strong>CASE 001</strong></span><span>02:17 AM</span></div>
+        <div class="file-label">INCIDENT REPORT / 001-A</div>
+        <p class="file-title">The Missing Signal</p>
+        <p class="file-copy">A receiver activates with no power source. A message arrives through the owner's own number. The workstation is still running. The network is gone.</p>
+        <div class="wave" aria-hidden="true"><i style="--h:12px"></i><i style="--h:18px"></i><i style="--h:10px"></i><i style="--h:24px"></i><i style="--h:36px"></i><i style="--h:18px"></i><i style="--h:29px"></i><i style="--h:42px"></i><i style="--h:20px"></i><i style="--h:13px"></i><i style="--h:34px"></i><i style="--h:48px"></i><i style="--h:27px"></i><i style="--h:15px"></i><i style="--h:23px"></i><i style="--h:39px"></i><i style="--h:18px"></i><i style="--h:30px"></i><i style="--h:51px"></i><i style="--h:24px"></i><i style="--h:12px"></i><i style="--h:28px"></i><i style="--h:43px"></i><i style="--h:20px"></i><i style="--h:34px"></i><i style="--h:14px"></i><i style="--h:25px"></i><i style="--h:45px"></i><i style="--h:17px"></i><i style="--h:32px"></i><i style="--h:21px"></i><i style="--h:39px"></i><i style="--h:13px"></i><i style="--h:29px"></i><i style="--h:46px"></i><i style="--h:19px"></i><i style="--h:35px"></i><i style="--h:11px"></i><i style="--h:25px"></i><i style="--h:38px"></i><i style="--h:16px"></i><i style="--h:30px"></i><i style="--h:44px"></i><i style="--h:22px"></i><i style="--h:14px"></i><i style="--h:33px"></i><i style="--h:47px"></i><i style="--h:18px"></i><i style="--h:28px"></i><i style="--h:12px"></i><i style="--h:39px"></i><i style="--h:24px"></i><i style="--h:31px"></i><i style="--h:15px"></i><i style="--h:43px"></i><i style="--h:20px"></i><i style="--h:35px"></i><i style="--h:11px"></i><i style="--h:27px"></i><i style="--h:40px"></i><i style="--h:18px"></i><i style="--h:32px"></i><i style="--h:14px"></i><i style="--h:25px"></i><i style="--h:45px"></i><i style="--h:19px"></i><i style="--h:30px"></i><i style="--h:12px"></i></div>
+        <div class="meta"><span>ORIGIN: UNKNOWN</span><span>NODE 09 // TRACE LOST</span></div>
+      </aside>
+    </section>
+    <section class="section"><div class="wrap">
+      <div class="section-title"><span class="num">01 / INVESTIGATION</span><h2>RECONSTRUCT THE CASE</h2><p>YOUR DEVICE IS THE EVIDENCE</p></div>
+      <div class="grid">
+        <article class="card"><span class="index">01 — DESKTOP</span><h3>THE WORKSTATION</h3><p>Explore a recovered desktop, system notices, files, and a timeline that refuses to stay in order.</p></article>
+        <article class="card"><span class="index">02 — PHONE</span><h3>THE ENCRYPTED LINE</h3><p>Inspect messages and answer interactive calls from Unknown, Mara, and the system itself.</p></article>
+        <article class="card"><span class="index">03 — EVIDENCE</span><h3>CONNECT THE SIGNAL</h3><p>Collect nine clues, connect the evidence, solve forensic puzzles, and choose what the truth means.</p></article>
+      </div>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <div class="section-title"><span class="num">02 / CASE DATA</span><h2>NOTHING STAYS BURIED</h2></div>
+      <div class="features">
+        <div class="feature"><strong>09</strong><span>Core clues</span></div><div class="feature"><strong>03</strong><span>Evidence connections</span></div><div class="feature"><strong>02</strong><span>Forensic puzzles</span></div><div class="feature"><strong>10</strong><span>Possible endings</span></div>
+      </div>
+      <div style="margin:30px 0 12px;color:#79746e;font-size:9px;letter-spacing:.16em">RECORDED OUTCOMES</div>
+      <div class="endings"><span class="ending">THE SILENCE</span><span class="ending">THE LAST WITNESS</span><span class="ending">THE DOUBLE</span><span class="ending">THE LEAK</span><span class="ending">THE EXPOSURE</span><span class="ending">THE SOURCE</span><span class="ending">THE ORIGIN</span><span class="ending">THE REWRITE</span><span class="ending">THE PRE-ECHO</span><span class="ending">THE LOOP</span></div>
+    </div></section>
+    <section class="section"><div class="wrap">
+      <div class="download-panel"><div><h3>Open the case.</h3><p>BLACK FILES — Case 001: The Missing Signal &nbsp;·&nbsp; Public release v1.0.0</p></div><div class="actions" style="margin:0"><a class="button" href="https://github.com/TheodoraGabriela/BLACK-FILE-GAME/releases/download/V1.0.0/BLACK-FILES.apk">Android APK <span class="arrow">↗</span></a><a class="button secondary" href="https://github.com/TheodoraGabriela/BLACK-FILE-GAME/releases/download/V1.0.0/BLACK-FILES-unsigned.ipa">iOS IPA <span class="arrow">↗</span></a></div></div>
+    </div></section>
+  </main>
+  <footer class="footer wrap"><span>FICTIONAL INVESTIGATION // ALL SYSTEMS SIMULATED</span><span>CREATED BY THEODORA-GABRIELA MUTULESCU · <a href="https://github.com/TheodoraGabriela/BLACK-FILE-GAME/releases/tag/V1.0.0">VIEW RELEASE ↗</a></span></footer>
+</body>
+</html>
